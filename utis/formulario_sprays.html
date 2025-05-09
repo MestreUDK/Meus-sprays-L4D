@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Spray - L4D</title>
+    <style>
+        body {
+            background: #111;
+            color: #eee;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #76b852;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            background: #222;
+            border: 1px solid #444;
+            color: #eee;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background: #76b852;
+            border: none;
+            font-weight: bold;
+            color: #000;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        pre {
+            margin-top: 20px;
+            background: #222;
+            padding: 15px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Spray - Left 4 Dead</h1>
+    <form id="sprayForm">
+        <label>Nome:</label>
+        <input type="text" id="nome">
+
+        <label>Data (ex: 2025-05-09):</label>
+        <input type="text" id="data">
+
+        <label>Detalhes:</label>
+        <textarea id="detalhes"></textarea>
+
+        <label>Tags (separadas por vírgula):</label>
+        <input type="text" id="tags">
+
+        <label>Link da imagem de amostra (ex: imagens/spray.png):</label>
+        <input type="text" id="imagem">
+
+        <label>Link do .vtf/.tga (ex: downloads/spray.vtf):</label>
+        <input type="text" id="link_vtf">
+
+        <label>Link do .zip (ex: downloads/spray.zip):</label>
+        <input type="text" id="link_zip">
+
+        <button type="button" onclick="gerarJSON()">Gerar JSON</button>
+    </form>
+
+    <pre id="resultado"></pre>
+
+    <script>
+        function gerarJSON() {
+            const spray = {
+                nome: document.getElementById('nome').value,
+                data: document.getElementById('data').value,
+                detalhes: document.getElementById('detalhes').value,
+                tags: document.getElementById('tags').value.split(',').map(tag => tag.trim()),
+                imagem: document.getElementById('imagem').value,
+                link_vtf: document.getElementById('link_vtf').value,
+                link_zip: document.getElementById('link_zip').value
+            };
+            document.getElementById('resultado').textContent = JSON.stringify(spray, null, 4);
+        }
+    </script>
+</body>
+</html>

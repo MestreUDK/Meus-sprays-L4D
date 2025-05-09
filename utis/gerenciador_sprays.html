@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciador de Sprays - L4D</title>
+    <style>
+        body {
+            background: #111;
+            color: #eee;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #76b852;
+        }
+        input, textarea, button {
+            padding: 6px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        input, textarea {
+            width: 90%;
+            background: #222;
+            color: #eee;
+        }
+        button {
+            background: #76b852;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .spray-card {
+            background: #222;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .field {
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerenciador de Sprays - Left 4 Dead</h1>
+
+    <h2>1. Carregar JSON</h2>
+    <input type="file" id="fileInput" accept=".json"><br><br>
+
+    <h2>2. Sprays Carregados</h2>
+    <div id="sprayList"></div>
+
+    <h2>3. Adicionar Novo Spray</h2>
+    <div class="spray-card">
+        <input id="novo_nome" placeholder="Nome"><br>
+        <input id="novo_data" placeholder="Data (ex: 2025-05-09)"><br>
+        <textarea id="novo_detalhes" placeholder="Detalhes"></textarea><br>
+        <input id="novo_tags" placeholder="Tags (separadas por vírgula)"><br>
+        <input id="novo_imagem" placeholder="Link da imagem"><br>
+        <input id="novo_vtf" placeholder="Link .vtf/.tga"><br>
+        <input id="novo_zip" placeholder="Link .zip"><br>
+        <button onclick="adicionarSpray()">Adicionar Spray</button>
+    </div>
+
+    <h2>4. Exportar JSON Atualizado</h2>
+    <button onclick="baixarJSON()">Baixar JSON</button>
+
+<script>
+    let sprays = [];
+
+    document.getElementById('fileInput').addEventListener('change', function(evt) {
+        const file = evt.target.files[0];
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            sprays = JSON.parse(e.target.result);
+            renderSprays();
+        };
+        reader.readAsText(file);
+    });
+
+    function renderSprays() {
+        const container = document.getElementById("sprayList");
+        container.innerHTML = "";
+        sprays.forEach((spray, index) => {
+            const div = document.createElement("div");
+            div.className = "spray-card";
+            div.innerHTML = `
+                <div class="field"><b>Nome:</b> <input value="${spray.nome}" onchange="editarCampo(${index}, 'nome', this.value)"></div>
+                <div class="field"><b>Data:</b> <input value="${spray.data}" onchange="editarCampo(${index}, 'data', this.value)"></div>
+                <div class="field"><b>Detalhes:</b> <textarea onchange="editarCampo(${index}, 'detalhes', this.value)">${spray.detalhes}</textarea></div>
+                <div class="field"><b>Tags:</b> <input value="${spray.tags.join(', ')}" onchange="editarCampo(${index}, 'tags', this.value.split(',').map(t => t.trim()))"></div>
+                <div class="field"><b>Imagem:</b> <input value="${spray.imagem}" onchange="editarCampo(${index}, 'imagem', this.value)"></div>
+                <div class="field"><b>VTF/TGA:</b> <input value="${spray.link_vtf}" onchange="editarCampo(${index}, 'link_vtf', this.value)"></div>
+                <div class="field"><b>ZIP:</b> <input value="${spray.link_zip}" onchange="editarCampo(${index}, 'link_zip', this.value)"></div>
+                <button onclick="removerSpray(${index})">Excluir</button>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    function editarCampo(index, campo, valor) {
+        sprays[index][campo] = valor;
+        if (campo === 'tags' && typeof valor === 'string') {
+            sprays[index][campo] = valor.split(',').map(t => t.trim());
+        }
+    }
+
+    function removerSpray(index) {
+        if (confirm("Tem certeza que deseja excluir este spray?")) {
+            sprays.splice(index, 1);
+            renderSprays();
+        }
+    }
+
+    function adicionarSpray() {
+        const novo = {
+            nome: document.getElementById("novo_nome").value,
+            data: document.getElementById("novo_data").value,
+            detalhes: document.getElementById("novo_detalhes").value,
+            tags: document.getElementById("novo_tags").value.split(',').map(t => t.trim()),
+            imagem: document.getElementById("novo_imagem").value,
+            link_vtf: document.getElementById("novo_vtf").value,
+            link_zip: document.getElementById("novo_zip").value
+        };
+        sprays.push(novo);
+        renderSprays();
+
+        // limpar campos
+        document.querySelectorAll('#novo_nome, #novo_data, #novo_detalhes, #novo_tags, #novo_imagem, #novo_vtf, #novo_zip')
+            .forEach(el => el.value = '');
+    }
+
+    function baixarJSON() {
+        const blob = new Blob([JSON.stringify(sprays, null, 4)], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "sprays_atualizado.json";
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+</script>
+</body>
+</html>
