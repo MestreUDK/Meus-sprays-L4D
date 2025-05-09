@@ -60,8 +60,8 @@ Aqui você encontra diversos sprays organizados por tags, com visualização, de
 
 ## 🔧 Ferramentas de Apoio
 
-- [**Formulário de Cadastro de Sprays**](formulario_sprays.html): Gera JSONs prontos para colar.
-- [**Gerenciador Visual de Sprays**](gerenciador_sprays.html): Edita, exclui e exporta o JSON atualizado direto pelo navegador.
+- [**Formulário de Cadastro de Sprays**](utils/formulario_sprays.html): Gera JSONs prontos para colar.
+- [**Gerenciador Visual de Sprays**](utils/gerenciador_sprays.html): Edita, exclui e exporta o JSON atualizado direto pelo navegador.
 
 ---
 
