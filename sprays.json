@@ -1,0 +1,26 @@
+[
+    {
+        "nome": "Spray Zumbi Clássico",
+        "data": "2025-04-20",
+        "detalhes": "Spray assustador clássico, ideal para mapas noturnos.",
+        "tags": [
+            "zumbi",
+            "horror"
+        ],
+        "imagem": "imagens/zumbi_classico.png",
+        "link_vtf": "downloads/zumbi_classico.vtf",
+        "link_zip": "downloads/zumbi_classico.zip"
+    },
+    {
+        "nome": "Spray Engraçado",
+        "data": "2025-04-22",
+        "detalhes": "Spray com um meme engraçado para descontrair.",
+        "tags": [
+            "meme",
+            "funny"
+        ],
+        "imagem": "imagens/spray_meme.png",
+        "link_vtf": "downloads/spray_meme.vtf",
+        "link_zip": "downloads/spray_meme.zip"
+    }
+]
