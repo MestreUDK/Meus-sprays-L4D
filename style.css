@@ -45,16 +45,6 @@ h1 {
     width: 100%;
     border-radius: 5px;
 }
-.buttons a {
-    display: block;
-    margin-top: 10px;
-    background: #76b852;
-    color: #000;
-    text-decoration: none;
-    padding: 8px;
-    border-radius: 5px;
-}
-
 .tag-button, .ano-button {
     margin: 5px;
     padding: 6px 12px;
@@ -70,6 +60,16 @@ h1 {
     font-weight: bold;
 }
 
+/* Estilo base reaplicado para manter consistência */
+.buttons a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
 /* Botões de Download Coloridos */
 .btn-vtf {
     background: #FFD700; /* amarelo ouro */
@@ -82,14 +82,4 @@ h1 {
 .btn-psd {
     background: #3498DB; /* azul claro */
     color: #fff;
-}
-
-/* Estilo base reaplicado para manter consistência */
-.buttons a {
-    display: block;
-    margin-top: 10px;
-    text-decoration: none;
-    padding: 8px;
-    border-radius: 5px;
-    font-weight: bold;
 }
