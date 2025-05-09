@@ -69,3 +69,27 @@ h1 {
     color: #000;
     font-weight: bold;
 }
+
+/* Botões de Download Coloridos */
+.btn-vtf {
+    background: #FFD700; /* amarelo ouro */
+    color: #000;
+}
+.btn-zip {
+    background: #E74C3C; /* vermelho intenso */
+    color: #fff;
+}
+.btn-psd {
+    background: #3498DB; /* azul claro */
+    color: #fff;
+}
+
+/* Estilo base reaplicado para manter consistência */
+.buttons a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
