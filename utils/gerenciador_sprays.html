@@ -54,13 +54,14 @@
 
     <h2>3. Adicionar Novo Spray</h2>
     <div class="spray-card">
-        <input id="novo_nome" placeholder="Nome"><br>
-        <input id="novo_data" placeholder="Data (ex: 2025-05-09)"><br>
-        <textarea id="novo_detalhes" placeholder="Detalhes"></textarea><br>
-        <input id="novo_tags" placeholder="Tags (separadas por vírgula)"><br>
-        <input id="novo_imagem" placeholder="Link da imagem"><br>
-        <input id="novo_vtf" placeholder="Link .vtf/.tga"><br>
-        <input id="novo_zip" placeholder="Link .zip"><br>
+        <div class="field"><b>Nome:</b><br><input id="novo_nome" placeholder="Nome"></div>
+        <div class="field"><b>Data:</b><br><input id="novo_data" placeholder="Data (ex: 2025-05-09)"></div>
+        <div class="field"><b>Detalhes:</b><br><textarea id="novo_detalhes" placeholder="Detalhes"></textarea></div>
+        <div class="field"><b>Tags:</b><br><input id="novo_tags" placeholder="Tags (separadas por vírgula)"></div>
+        <div class="field"><b>Imagem:</b><br><input id="novo_imagem" placeholder="Link da imagem"></div>
+        <div class="field"><b>VTF/TGA:</b><br><input id="novo_vtf" placeholder="Link .vtf/.tga"></div>
+        <div class="field"><b>ZIP:</b><br><input id="novo_zip" placeholder="Link .zip"></div>
+        <div class="field"><b>PSD:</b><br><input id="novo_psd" placeholder="Link .psd"></div>
         <button onclick="adicionarSpray()">Adicionar Spray</button>
     </div>
 
@@ -94,6 +95,7 @@
                 <div class="field"><b>Imagem:</b> <input value="${spray.imagem}" onchange="editarCampo(${index}, 'imagem', this.value)"></div>
                 <div class="field"><b>VTF/TGA:</b> <input value="${spray.link_vtf}" onchange="editarCampo(${index}, 'link_vtf', this.value)"></div>
                 <div class="field"><b>ZIP:</b> <input value="${spray.link_zip}" onchange="editarCampo(${index}, 'link_zip', this.value)"></div>
+                <div class="field"><b>PSD:</b> <input value="${spray.link_psd || ''}" onchange="editarCampo(${index}, 'link_psd', this.value)"></div>
                 <button onclick="removerSpray(${index})">Excluir</button>
             `;
             container.appendChild(div);
@@ -122,13 +124,13 @@
             tags: document.getElementById("novo_tags").value.split(',').map(t => t.trim()),
             imagem: document.getElementById("novo_imagem").value,
             link_vtf: document.getElementById("novo_vtf").value,
-            link_zip: document.getElementById("novo_zip").value
+            link_zip: document.getElementById("novo_zip").value,
+            link_psd: document.getElementById("novo_psd").value
         };
         sprays.push(novo);
         renderSprays();
 
-        // limpar campos
-        document.querySelectorAll('#novo_nome, #novo_data, #novo_detalhes, #novo_tags, #novo_imagem, #novo_vtf, #novo_zip')
+        document.querySelectorAll('#novo_nome, #novo_data, #novo_detalhes, #novo_tags, #novo_imagem, #novo_vtf, #novo_zip, #novo_psd')
             .forEach(el => el.value = '');
     }
 
