@@ -49,16 +49,25 @@ fetch("sprays.json")
         const todosAnos = new Set();
 
         data.forEach(spray => {
-            // Coleta tags e ano
             spray.tags.forEach(t => todasTags.add(t));
             todosAnos.add(spray.data.slice(0, 4));
 
-            // Criação do card
             const item = document.createElement("div");
             item.className = "spray-item";
             item.dataset.nome = spray.nome.toLowerCase();
             item.dataset.tags = spray.tags.join(',');
             item.dataset.ano = spray.data.slice(0, 4);
+
+            let botoesHTML = "";
+            if (spray.link_vtf) {
+                botoesHTML += `<a class="btn-vtf" href="${spray.link_vtf}" download>Baixar .vtf/.tga</a>`;
+            }
+            if (spray.link_zip) {
+                botoesHTML += `<a class="btn-zip" href="${spray.link_zip}" download>Baixar .zip</a>`;
+            }
+            if (spray.link_psd) {
+                botoesHTML += `<a class="btn-psd" href="${spray.link_psd}" download>Baixar .psd</a>`;
+            }
 
             item.innerHTML = `
                 <h3>${spray.nome}</h3>
@@ -66,10 +75,7 @@ fetch("sprays.json")
                 <p>${spray.detalhes}</p>
                 <div class="tags">Tags: ${spray.tags.join(', ')}</div>
                 <img src="${spray.imagem}" alt="${spray.nome}">
-                <div class="buttons">
-                    <a href="${spray.link_vtf}" download>Baixar .vtf/.tga</a>
-                    <a href="${spray.link_zip}" download>Baixar .zip</a>
-                </div>
+                <div class="buttons">${botoesHTML}</div>
             `;
             list.appendChild(item);
         });
