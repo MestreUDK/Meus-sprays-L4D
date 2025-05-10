@@ -28,7 +28,7 @@
     },
     {
         "nome": "Pernalonga Comunista",
-        "data": "2022-05-06",
+        "data": "2022-04-21",
         "detalhes": "Pernalonga Comunista",
         "tags": [
             "meme",
@@ -42,7 +42,7 @@
     },
     {
         "nome": "Pernalonga Cobrador de Pastéis",
-        "data": "2022-06-06",
+        "data": "2023-04-12",
         "detalhes": "Cobre seu pastel com o Pernalonga cobrador de pastéis",
         "tags": [
             "meme",
@@ -53,5 +53,17 @@
         "link_vtf": "downloads/pernalonga/pcp_a.vtf",
         "link_zip": "downloads/pernalonga/pernalonga_pasteis.zip",
         "link_psd": "downloads/pernalonga/pernalonga_pastel.psd"
+    },
+    {
+        "nome": "Espiral Animado",
+        "data": "2022-04-22",
+        "detalhes": "Spray animado espiralado",
+        "tags": [
+            "animado"
+        ],
+        "imagem": "imagens/espiral/espiral.png",
+        "link_vtf": "downloads/espiral/spiral.vtf",
+        "link_zip": "downloads/espiral/spiral.zip",
+        "link_psd": ""
     }
 ]
