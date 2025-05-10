@@ -5,8 +5,7 @@
         "detalhes": "Spray com o IP do servidor de Left 4 Dead",
         "tags": [
             "seb",
-            "servidor_l4d",
-            "animado"
+            "servidor_l4d"
         ],
         "imagem": "imagens/seb/seb_a_base.png",
         "link_vtf": "downloads/seb/seb_a.vtf",
@@ -18,11 +17,37 @@
         "detalhes": "Spray com o IP do servidor de Left 4 Dead",
         "tags": [
             "seb",
-            "servidor_l4d",
-            "animado"
+            "servidor_l4d"
         ],
         "imagem": "imagens/seb/seb_b_base.png",
         "link_vtf": "downloads/seb/seb_b.vtf",
-        "link_zip": "downloads/seb/seb_b.zip"
+        "link_zip": "downloads/seb/seb_b.zip",
+        "link_psd": "downloads/seb/seb_b_pjt.psd"
+    },
+    {
+        "nome": "Pernalonga Comunista",
+        "data": "2022-05-06",
+        "detalhes": "Pernalonga Comunista",
+        "tags": [
+            "meme",
+            "pernalonga"
+        ],
+        "imagem": "imagens/pernalonga/pernalonga_comunista.png",
+        "link_vtf": "downloads/pernalonga/pernalonga_comunista.vtf",
+        "link_zip": "downloads/pernalonga/pernalonga_comunista.zip",
+        "link_psd": "downloads/pernalonga/pernalonga_comunista.psd"
+    },
+    {
+        "nome": "Pernalonga Cobrador de Pastéis",
+        "data": "2022-06-06",
+        "detalhes": "Cobre seu pastel com o Pernalonga cobrador de pastéis",
+        "tags": [
+            "meme",
+            "pernalonga"
+        ],
+        "imagem": "imagens/pernalonga/pernalonga_pasteis.png",
+        "link_vtf": "downloads/pernalonga/pcp_a.vtf",
+        "link_zip": "downloads/pernalonga/pernalonga_pasteis.zip",
+        "link_psd": "downloads/pernalonga/pernalonga_pastel.psd"
     }
 ]
