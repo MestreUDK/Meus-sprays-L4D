@@ -43,6 +43,13 @@ function gerarBotoes(filtros, tipo, containerId) {
 fetch("sprays.json")
     .then(res => res.json())
     .then(data => {
+        // Ordena por data (mais recente primeiro) e por nome (alfabético)
+        data.sort((a, b) => {
+            if (a.data > b.data) return -1;
+            if (a.data < b.data) return 1;
+            return a.nome.localeCompare(b.nome);
+        });
+
         spraysGlobal = data;
         const list = document.getElementById("sprayList");
         const todasTags = new Set();
