@@ -65,5 +65,155 @@
         "link_vtf": "downloads/espiral/spiral.vtf",
         "link_zip": "downloads/espiral/spiral.zip",
         "link_psd": ""
+    },
+    {
+        "nome": "Erwin_A1",
+        "data": "2021-11-23",
+        "detalhes": "Spray do Erwin do anime Attack on Titan",
+        "tags": [
+            "anime",
+            "aot",
+            "animado"
+        ],
+        "imagem": "imagens/anime/Erwin_A1.jpg",
+        "link_vtf": "downloads/anime/Erwin_A1.vtf",
+        "link_zip": "downloads/anime/Erwin_A1.zip",
+        "link_psd": ""
+    },
+    {
+        "nome": "Erwin_A2",
+        "data": "2021-11-23",
+        "detalhes": "Spray do Erwin do anime Attack on Titan",
+        "tags": [
+            "anime",
+            "aot",
+            "animado"
+        ],
+        "imagem": "imagens/anime/Erwin_A2.jpg",
+        "link_vtf": "downloads/anime/Erwin_A2.vtf",
+        "link_zip": "downloads/anime/Erwin_A2.zip",
+        "link_psd": ""
+    },
+    {
+        "nome": "Erwin_A3",
+        "data": "2021-11-23",
+        "detalhes": "Spray do Erwin do anime Attack on Titan",
+        "tags": [
+            "anime",
+            "aot",
+            "animado"
+        ],
+        "imagem": "imagens/anime/Erwin_A3.jpg",
+        "link_vtf": "downloads/anime/Erwin_A3.vtf",
+        "link_zip": "downloads/anime/Erwin_A3.zip",
+        "link_psd": ""
+    },
+    {
+        "nome": "Lá ele",
+        "data": "2023-12-23",
+        "detalhes": "Spray do meme \"lá ele\" usando a capa do filme \"O Livro de Eli\"",
+        "tags": [
+            "meme",
+            "estático"
+        ],
+        "imagem": "imagens/laele/L%C3%A1%20ele.png",
+        "link_vtf": "downloads/laele/laele.tga",
+        "link_zip": "downloads/laele/laele.zip",
+        "link_psd": "downloads/laele/laele.psd"
+    },
+    {
+        "nome": "Guts e Goku",
+        "data": "2025-03-07",
+        "detalhes": "Guts e Goku",
+        "tags": [
+            "anime",
+            "estático",
+            "berserker",
+            "sailoor moon"
+        ],
+        "imagem": "imagens/anime/Guts%20e%20Goku.jpg",
+        "link_vtf": "downloads/anime/Guts%20e%20Goku.tga",
+        "link_zip": "downloads/anime/Guts%20e%20Goku.zip",
+        "link_psd": "downloads/anime/Guts%20e%20Goku.psd"
+    },
+    {
+        "nome": "Guts fumando",
+        "data": "2025-03-07",
+        "detalhes": "Guts fumando com a Sailoor Moon",
+        "tags": [
+            "anime",
+            "berserker",
+            "sailoor moon"
+        ],
+        "imagem": "imagens/anime/Guts%20fumando.jpg",
+        "link_vtf": "downloads/anime/Guts%20fumando.tga",
+        "link_zip": "downloads/anime/Guts%20fumando.zip",
+        "link_psd": "downloads/anime/Guts%20fumando.psd"
+    },
+    {
+        "nome": "Loja Sakamoto",
+        "data": "2025-03-07",
+        "detalhes": "Personagens do anime Sakamoto Days no balcão da loja",
+        "tags": [
+            "anime",
+            "sakamoto days",
+            "estático"
+        ],
+        "imagem": "imagens/anime/LojaSakamoto.jpg",
+        "link_vtf": "downloads/anime/LojaSakamoto.tga",
+        "link_zip": "downloads/anime/LojaSakamoto.zip",
+        "link_psd": "downloads/anime/LojaSakamoto.psd"
+    },
+    {
+        "nome": "Só os tarados",
+        "data": "2025-03-07",
+        "detalhes": "Só os personagens tarados",
+        "tags": [
+            "anime",
+            "estático"
+        ],
+        "imagem": "imagens/anime/Onlytarados.jpg",
+        "link_vtf": "downloads/anime/Onlytarados.tga",
+        "link_zip": "downloads/anime/OnlyTarados.zip",
+        "link_psd": "downloads/anime/Onlytarados.psd"
+    },
+    {
+        "nome": "Saitama e seus filhos",
+        "data": "2025-03-07",
+        "detalhes": "Saitama e outros personagens que parecem ser filhos ou parentes dele",
+        "tags": [
+            "anime",
+            "estático"
+        ],
+        "imagem": "imagens/anime/Saitama%20e%20filhos.jpg",
+        "link_vtf": "downloads/anime/Saitama%20e%20filhos.tga",
+        "link_zip": "downloads/anime/Saitama%20e%20filhos.zip",
+        "link_psd": "downloads/anime/Saitama%20e%20filhos.psd"
+    },
+    {
+        "nome": "Senseis",
+        "data": "2025-03-07",
+        "detalhes": "Senseis (professores ou mestres) de vários animes",
+        "tags": [
+            "anime",
+            "estático"
+        ],
+        "imagem": "imagens/anime/Senseis.jpg",
+        "link_vtf": "downloads/anime/Senseis.tga",
+        "link_zip": "downloads/anime/Senseis.zip",
+        "link_psd": "downloads/anime/Senseis.psd"
+    },
+    {
+        "nome": "Shounens",
+        "data": "2025-03-07",
+        "detalhes": "Vários personagens de animes shounen",
+        "tags": [
+            "anime",
+            "estático"
+        ],
+        "imagem": "imagens/anime/Shounens.jpg",
+        "link_vtf": "downloads/anime/Shounens.tga",
+        "link_zip": "downloads/anime/Shounens.zip",
+        "link_psd": "downloads/anime/Shounens.psd"
     }
 ]
