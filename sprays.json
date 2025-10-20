@@ -215,5 +215,19 @@
         "link_vtf": "downloads/anime/Shounens.tga",
         "link_zip": "downloads/anime/Shounens.zip",
         "link_psd": "downloads/anime/Shounens.psd"
+    },
+    {
+        "nome": "Maga Negra",
+        "data": "2025-10-16",
+        "detalhes": "Personagem maga negra do anime Yugioh",
+        "tags": [
+            "anime",
+            "yugioh",
+            "animado"
+        ],
+        "imagem": "imagens/anime/maganegra.png",
+        "link_vtf": "downloads/anime/maga.vtf",
+        "link_zip": "downloads/anime/maga.zip",
+        "link_psd": ""
     }
 ]
